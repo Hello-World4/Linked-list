@@ -42,7 +42,7 @@ public class Link {
         return false;
     }
 
-    public int total(){
+    public int total(){ //size
         int count = 0;
         Node curr = head;
         while(curr != null){
@@ -75,8 +75,49 @@ public class Link {
         curr.next = tmp.next;
         tmp.next = null;
 
+    }
+
+    //Recursive
+
+    public Node addLast2(int data, Node elem){
+        if (elem == null){
+            elem = new Node(data);
+        }else{
+            elem.next = addLast2(data, elem.next);
+        }
+        return elem;
+    }
+
+    public boolean search(int x, Node head){
+        if(head == null){
+            return false;
+        }
+        if(head.data == x){
+            return true;
+        }
+        return search(x,head.next);
 
     }
+
+    public int size(Node head){
+        if (head == null){
+            return 0;
+        }
+        return 1 + size(head.next);
+    }
+
+    
+
+    public void display2(Node head){
+        if(head == null){
+            return;
+        }
+        System.out.println(head.data);
+        display2(head.next);
+
+    }
+
+
 
 
 
