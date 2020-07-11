@@ -5,10 +5,14 @@ public class Main {
 
         a.addFirst(10);
         a.addFirst(20);
-        a.addLast(40);
-        //System.out.println(a.total());
+        //a.addLast(40);
+        a.addFirst(30);
+        a.addFirst(40);
+        System.out.println(a.total());
         System.out.println(a.isHere(20));
-        //a.display();
-        a.reverse();
+        a.delete(2);
+        a.display();
+       // a.reverse();
+
     }
 }

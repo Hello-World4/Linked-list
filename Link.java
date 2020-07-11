@@ -64,6 +64,20 @@ public class Link {
         }
     }
 
+    public void delete(int position){
+        int count = 0;
+        Node curr = head;
+        while( count < position-1){
+            curr = curr.next;
+            count++;
+        }
+        Node tmp = curr.next;
+        curr.next = tmp.next;
+        tmp.next = null;
+
+
+    }
+
 
 
 
