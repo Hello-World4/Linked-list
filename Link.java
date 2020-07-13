@@ -65,7 +65,17 @@ public class Link {
     }
 
     public void reverse2(){
-         
+        Node curr = head;
+        Node prev = null;
+        while(curr != null){
+            Node next_node = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next_node;
+
+        }
+
+
     }
 
     public void delete(int position){
