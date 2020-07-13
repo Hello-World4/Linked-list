@@ -15,6 +15,7 @@ public class Main {
         System.out.println(a.search(20,a.head)); //recursive
         a.delete(2);
         //a.display();
+        a.reverse2();
         a.display2(a.head); //recursive
        // a.reverse();
 

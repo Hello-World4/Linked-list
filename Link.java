@@ -64,6 +64,10 @@ public class Link {
         }
     }
 
+    public void reverse2(){
+         
+    }
+
     public void delete(int position){
         int count = 0;
         Node curr = head;
