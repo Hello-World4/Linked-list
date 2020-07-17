@@ -63,7 +63,7 @@ public class Link {
             System.out.println(i.pop());
         }
     }
-
+  /*
     public void reverse2(){
         Node curr = head;
         Node prev = null;
@@ -74,9 +74,23 @@ public class Link {
             curr = next_node;
 
         }
-
-
     }
+    */
+
+  public Node reverse3(Node head){
+      Node curr = head;
+      Node prev = null;
+      while(curr != null){
+          Node next_node = curr.next;
+          curr.next = prev;
+          prev = curr;
+          curr = next_node;
+      }
+      return prev;
+
+  }
+
+
 
     public void delete(int position){
         int count = 0;
